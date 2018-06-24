@@ -18,3 +18,8 @@ This apps allows you to create blocks. A block can be an EXPRESSION or a GROUP.
 *  A GROUP is a set of EXPRESSIONS separated by an OPERATOR ('OR' or 'AND')
 
 You can create nested blocks.
+It is possible to reorganize blocks by dragging them.
+
+## Example
+
+![Example](https://github.com/johnBuffer/Vue-MongoRequestBuilder/blob/master/img/example.png)
