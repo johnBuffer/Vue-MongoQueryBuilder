@@ -1,7 +1,7 @@
 <template>
   <div class="container" id="mainSearchPanel">
     <div class="col">
-      <h1>Search in base</h1>
+      <h1>Build your query</h1>
 
       <group-builder :item='objectModel' @sendQuery='sendPost'></group-builder>
       <div>{{ buildedSearch }}</div>
