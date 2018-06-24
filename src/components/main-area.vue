@@ -140,11 +140,23 @@
     },
 
     created: function () {
-      this.$http.get('http://localhost:3000/search').then(response => {
+      /* this.$http.get('http://localhost:3000/search').then(response => {
         // this.initObjectModel(response.body.data[0])
         this.objectModel = response.body.data[0]
       })
-      window.addEventListener('scroll', this.checkScroll)
+      window.addEventListener('scroll', this.checkScroll) */
+      this.objectModel = {
+        'example': {
+          'child1': 'ok',
+          'child2': {
+            'sub1': {
+              'subsub1': 0,
+              'subsub2': 1
+            },
+            'sub2': 'lol'
+          }
+        }
+      }
     }
   }
 </script>
