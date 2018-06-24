@@ -16,11 +16,11 @@
             <option> &gt </option>
             <option> &lt </option>
             <option> exists </option>
-            <option v-if='subItem'> matchs </option>
+            <option v-if='subItemIsObject'> matches </option>
           </select>
 
           <input v-if='operator.length === 1' class='form-control' type='text' v-model='value' @keyup.enter='sendQuery'/>
-          <group-builder v-if='operator === "matchs"' :name='"innerGroup"' :item='subItem' @kill='resetOperator' @change='updateGroupQuery'></group-builder>
+          <group-builder v-if='operator === "matches"' :name='"innerGroup"' :item='subItem' @kill='resetOperator' @change='updateGroupQuery'></group-builder>
         </div>
       </div>
     </div>
@@ -90,7 +90,7 @@
         if (this.objectValuePath.length > 0) {
           if (this.operator === 'exists') {
             string += '{ "$exists": true }'
-          } else if (this.operator === 'matchs') {
+          } else if (this.operator === 'matches') {
             string += '{"$elemMatch": {' + this.groupQuery + '}}'
           } else if (!isNaN(Number(this.value))) {
             if (this.operator === '>') {
@@ -115,7 +115,17 @@
           currentObject = currentObject[pathNames[i]]
         }
 
+        console.log('SubItem: ' + currentObject)
         return currentObject
+      },
+
+      subItemIsObject: function () {
+        if (this.subItem) {
+          if (typeof this.subItem === 'object') {
+            return true
+          }
+        }
+        return false
       }
     },
 

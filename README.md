@@ -1,6 +1,6 @@
 # Vue-MongoRequestBuilder
 
-A visual MongoDB search request builder using Vuejs as framework with bootstrap.
+A visual MongoDB query builder using Vuejs as framework with bootstrap for CSS.
 
 This app builds a json object (with MongoDB query syntax) recursively using expression blocks.
 
@@ -17,8 +17,7 @@ This apps allows you to create blocks. A block can be an EXPRESSION or a GROUP.
 *  An EXPRESSION is a CONDITION on a field of the database's object
 *  A GROUP is a set of EXPRESSIONS separated by an OPERATOR ('OR' or 'AND')
 
-You can create nested blocks.
-It is possible to reorganize blocks by dragging them.
+You may create nested blocks and reorganize them using drag and drop.
 
 ## Example
 
