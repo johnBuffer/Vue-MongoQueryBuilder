@@ -39,7 +39,7 @@
         </div>
 
         <div v-if='!name' class='card-footer d-flex justify-content-center'>
-          <button class='btn btn-success' @click='sendQuery'>Search</button>
+          <button class='btn btn-success' @click='sendQuery'>Generate JSON</button>
         </div>
 
       </div>
