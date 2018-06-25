@@ -1,4 +1,4 @@
-# Vue-MongoRequestBuilder
+# Vue-MongoQueryBuilder
 
 A visual MongoDB query builder using Vuejs as framework with bootstrap for CSS.
 
